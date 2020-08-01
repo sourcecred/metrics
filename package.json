@@ -12,6 +12,7 @@
     "check-pretty": "prettier --list-different '**/*.json'"
   },
   "devDependencies": {
+    "flow-bin": "^0.130.0",
     "prettier": "^2.0.5"
   }
 }

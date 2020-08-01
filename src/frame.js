@@ -3,7 +3,7 @@
 import type {Iso8601String} from "./date";
 import type {JsonObject} from "./json";
 
-type Message<+T> = {|
+export type Message<+T> = {|
   // Timestamp at which this message was computed, as an ISO 8601
   // string representing an instant, conventionally in UTC with second
   // precision.

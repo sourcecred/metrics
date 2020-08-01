@@ -2,7 +2,6 @@
 
 import type {Job} from "./job";
 
-import {default as one} from "./jobs/one";
-import {default as two} from "./jobs/two";
+import {default as stargazers} from "./jobs/stargazers";
 
-export default ([one, two]: $ReadOnlyArray<Job>);
+export default ([stargazers]: $ReadOnlyArray<Job>);

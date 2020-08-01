@@ -12,8 +12,10 @@ jobs:
   record:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
+      - name: "Check out sourcecred/metrics"
+        uses: actions/checkout@v2
+      - name: "Check out sourcecred/metrics-output"
+        uses: actions/checkout@v2
         with:
           repository: "sourcecred/metrics-output"
           path: "output"
@@ -22,14 +24,17 @@ jobs:
       - uses: actions/setup-node@v2.1.1
       - run: yarn
       - run: yarn build
-      - run: node ./bin/main ./output
+      - name: "Collect metrics"
+        run: node ./bin/main ./output
         env:
           SOURCECRED_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: git -C output add .
-      - name: Configure Git author as CredBot
+      - name: "Commit metrics changes"
         run: |
           git -C output config user.name 'credbot'
           git -C output config user.email '42819382+credbot@users.noreply.github.com'
-      - run: git -C output commit --allow-empty -m 'Update metrics'
-      - run: git -C output show
-      - run: git -C output push --dry-run
+          git -C output add .
+          git -C output commit --allow-empty -m 'Update metrics'
+      - name: "Preview committed changes"
+        run: git -C output show
+      - name: "Push changes (with dry-run)"
+        run: git -C output push --dry-run

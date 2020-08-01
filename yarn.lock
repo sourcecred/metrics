@@ -68,6 +68,13 @@ graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
+json-stable-stringify@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz#9a759d39c5f2ff503fd5300646ed445f88c4f9af"
+  integrity sha1-mnWdOcXy/1A/1TAGRu1EX4jE+a8=
+  dependencies:
+    jsonify "~0.0.0"
+
 jsonfile@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-6.0.1.tgz#98966cba214378c8c84b82e085907b40bf614179"
@@ -76,6 +83,11 @@ jsonfile@^6.0.1:
     universalify "^1.0.0"
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+jsonify@~0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
+  integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
 
 minimatch@^3.0.2:
   version "3.0.4"

@@ -13,6 +13,8 @@
   },
   "devDependencies": {
     "flow-bin": "^0.130.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "rollup": "^2.23.0",
+    "rollup-plugin-flow": "^1.1.1"
   }
 }

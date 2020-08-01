@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - 'ci-*'
+  pull_request: {}
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.1
+      - run: yarn
+      - run: yarn check-pretty
+      - run: yarn flow

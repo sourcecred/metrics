@@ -9,8 +9,8 @@
   "private": true,
   "scripts": {
     "build": "rollup -c",
-    "prettify": "prettier --write '**/*.js' '**/*.json'",
-    "check-pretty": "prettier --list-different '**/*.js' '**/*.json'"
+    "prettify": "prettier --write '**/*.js' '**/*.json' '**/*.yml'",
+    "check-pretty": "prettier --list-different '**/*.js' '**/*.json' '**/*.yml'"
   },
   "devDependencies": {
     "flow-bin": "^0.130.0",

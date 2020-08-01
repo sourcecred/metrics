@@ -4,7 +4,12 @@ import jobs from "./allJobs";
 import {run} from "./orchestrator";
 
 async function main() {
-  process.exitCode = await run(jobs, "test-output-dir");
+  const args = process.argv.slice(2);
+  let outputDir = "test-output-dir";
+  if (args.length > 0) {
+    outputDir = args[0];
+  }
+  process.exitCode = await run(jobs, outputDir);
 }
 
 main();

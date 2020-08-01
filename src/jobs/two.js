@@ -1,9 +1,8 @@
 // @flow
 
 import type {Job, JobResult} from "../job";
-import type {Message} from "../frame";
 
-export default {
+const job: Job = {
   name() {
     return "two";
   },
@@ -17,3 +16,5 @@ export default {
     };
   },
 };
+
+export default job;

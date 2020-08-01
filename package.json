@@ -8,6 +8,7 @@
   "license": "MIT + Apache-2",
   "private": true,
   "scripts": {
+    "build": "rollup -c",
     "prettify": "prettier --write '**/*.js' '**/*.json'",
     "check-pretty": "prettier --list-different '**/*.js' '**/*.json'"
   },

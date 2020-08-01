@@ -1,0 +1,10 @@
+{
+  "name": "sourcecred-metrics",
+  "version": "0.1.0",
+  "description": "Internal metric collection for SourceCred",
+  "main": "index.js",
+  "repository": "https://github.com/sourcecred/metrics.git",
+  "author": "William Chargin <wchargin@gmail.com>",
+  "license": "MIT + Apache-2",
+  "private": true
+}

@@ -33,7 +33,7 @@ jobs:
           git -C output config user.name 'credbot'
           git -C output config user.email '42819382+credbot@users.noreply.github.com'
           git -C output add .
-          git -C output commit --allow-empty -m 'Update metrics'
+          git -C output commit --allow-empty -m "Update metrics: $(date -u -Is)"
       - name: "Preview committed changes"
         run: git -C output show
       - name: "Push changes (with dry-run)"

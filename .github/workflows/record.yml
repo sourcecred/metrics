@@ -36,5 +36,5 @@ jobs:
           git -C output commit --allow-empty -m "Update metrics: $(date -u -Is)"
       - name: "Preview committed changes"
         run: git -C output show
-      - name: "Push changes (with dry-run)"
-        run: git -C output push --dry-run
+      - name: "Push changes"
+        run: git -C output push
